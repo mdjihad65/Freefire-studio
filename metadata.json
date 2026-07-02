@@ -1,0 +1,6 @@
+{
+  "name": "FF Studio",
+  "description": "A premium, minimalist, responsive suite for styling Free Fire profile bios, generating stylish nickname texts, and copying professional esports clan symbols.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

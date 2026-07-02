@@ -1,0 +1,1222 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FF Studio - Custom Game Bio, Fancy Text & Stylish Symbols</title>
+    <!-- Link the processed stylesheet containing Tailwind and typography -->
+    <link rel="stylesheet" href="/src/style.css">
+    <!-- FontAwesome CSS for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body class="bg-[#fafafa] text-[#09090b] font-sans antialiased selection:bg-rose-500 selection:text-white min-h-screen flex flex-col justify-between">
+    <div id="page-wrapper" class="flex flex-col min-h-screen justify-between transition-all duration-[350ms]">
+
+    <!-- A. GLOBAL HEADER -->
+    <header id="main-header" class="hidden w-full bg-white/80 backdrop-blur-md border-b border-zinc-200/80 sticky top-0 z-40 transition-all duration-300">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <!-- Brand Logo -->
+        <button id="btn-header-logo-home" class="flex items-center gap-2.5 group focus:outline-none cursor-pointer text-left">
+          <div class="w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-all duration-300">
+            <img src="https://i.ibb.co.com/4cvpnJY/20260701-202305.png" alt="FF Studio Logo" class="w-full h-full object-contain" referrerpolicy="no-referrer">
+          </div>
+          <span class="font-bold text-base sm:text-lg tracking-tight text-zinc-900">
+            FF <span class="text-rose-600 font-extrabold">Studio</span>
+          </span>
+        </button>
+
+        <!-- Menu Action -->
+        <button id="btn-menu-toggle" class="p-2 rounded-lg hover:bg-zinc-100 border border-zinc-200/60 active:scale-95 transition-all cursor-pointer flex items-center justify-center" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars text-zinc-600 text-base"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- B. MAIN PAGES PORT WRAPPER -->
+    <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      
+      <!-- VIEW 0: LANDING WORKSPACE -->
+      <div id="view-home" class="space-y-12 transition-all duration-300 transform opacity-100 translate-y-0">
+        <!-- Homepage Hero Section -->
+        <section class="text-center space-y-4 max-w-2xl mx-auto py-10 flex flex-col items-center">
+          <div class="w-24 h-24 sm:w-28 sm:h-28 flex items-center justify-center animate-bounce-slow">
+            <img src="https://i.ibb.co.com/4cvpnJY/20260701-202305.png" alt="FF Studio Logo" class="w-full h-full object-contain" referrerpolicy="no-referrer">
+          </div>
+          <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-zinc-950 sm:leading-none">
+            FF <span class="text-rose-600 font-extrabold">Studio</span>
+          </h1>
+          <p class="text-sm sm:text-base text-zinc-500 leading-relaxed max-w-xl mx-auto">
+            The ultimate companion workshop for competitive Garena Free Fire rosters and esports athletes. Design flawless profile signatures, generate aesthetic nicknames, and copy professional clan tags instantly.
+          </p>
+        </section>
+
+        <!-- Tools Explorer Section -->
+        <section class="max-w-4xl mx-auto space-y-6">
+          <div class="border-b border-zinc-200 pb-3">
+            <h2 class="text-xs font-bold text-zinc-900 tracking-wider select-none inline-block border-b-2 border-rose-600 pb-1 uppercase">
+              Explore Creator Tools
+            </h2>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+            
+            <!-- Tool 1: FF Bio Builder -->
+            <button id="btn-card-bio" class="text-left bg-white border border-zinc-200/80 hover:border-rose-400/80 hover:shadow-md hover:translate-y-[-2px] rounded-2xl p-4 transition-all duration-300 group flex flex-col justify-between min-h-[250px] w-full cursor-pointer focus:outline-none">
+              <!-- Top Row -->
+              <div class="w-full flex items-center justify-between">
+                <div class="w-9 h-9 rounded-xl bg-rose-50 flex items-center justify-center text-rose-600 text-sm group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-signature text-xs"></i>
+                </div>
+                <span class="text-[9px] font-extrabold text-rose-600 uppercase tracking-wider bg-rose-50 border border-rose-100/50 px-2 py-0.5 rounded-md">Emulator</span>
+              </div>
+              
+              <!-- Content and Mock Preview -->
+              <div class="w-full my-4 space-y-2">
+                <div class="space-y-0.5">
+                  <h3 class="text-sm font-extrabold text-zinc-900 group-hover:text-rose-600 transition-colors">FF Bio Builder</h3>
+                  <p class="text-[10px] text-zinc-400 leading-tight">Glow & color signatures</p>
+                </div>
+                <!-- Embedded mini Emulator view with rich, spacious styling -->
+                <div class="w-full bg-zinc-950 rounded-lg p-2 border border-zinc-850 font-mono text-[9px] text-zinc-300 shadow-inner flex flex-col gap-1">
+                  <div class="flex items-center justify-between border-b border-zinc-900 pb-0.5">
+                    <span class="text-[7px] text-zinc-600 font-bold uppercase tracking-wider">In-game Display</span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                  </div>
+                  <span class="font-bold text-[#FF0055] drop-shadow-[0_0_2px_#FF0055] tracking-wide">★ [b][c]Garena King</span>
+                </div>
+              </div>
+
+              <!-- Footer CTA -->
+              <div class="w-full flex items-center justify-between text-[10px] font-bold text-rose-600 border-t border-zinc-100 pt-2">
+                <span>Open Builder</span>
+                <span class="group-hover:translate-x-1 transition-transform">➔</span>
+              </div>
+            </button>
+
+            <!-- Tool 2: FF Name Generator -->
+            <button id="btn-card-namegen" class="text-left bg-white border border-zinc-200/80 hover:border-rose-400/80 hover:shadow-md hover:translate-y-[-2px] rounded-2xl p-4 transition-all duration-300 group flex flex-col justify-between min-h-[250px] w-full cursor-pointer focus:outline-none">
+              <!-- Top Row -->
+              <div class="w-full flex items-center justify-between">
+                <div class="w-9 h-9 rounded-xl bg-amber-50 flex items-center justify-center text-amber-600 text-sm group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-gamepad text-xs"></i>
+                </div>
+                <span class="text-[9px] font-extrabold text-amber-600 uppercase tracking-wider bg-amber-50 border border-amber-100/50 px-2 py-0.5 rounded-md">Trending</span>
+              </div>
+              
+              <!-- Content and Mock Preview -->
+              <div class="w-full my-4 space-y-2">
+                <div class="space-y-0.5">
+                  <h3 class="text-sm font-extrabold text-zinc-900 group-hover:text-rose-600 transition-colors">Name Generator</h3>
+                  <p class="text-[10px] text-zinc-400 leading-tight">Nicknames & gaming tags</p>
+                </div>
+                <!-- Mini Display Badge with elegant list -->
+                <div class="w-full flex flex-col gap-1.5 bg-zinc-50 rounded-lg p-2 border border-zinc-100/80">
+                  <div class="flex justify-between items-center text-[9px] font-bold text-zinc-700">
+                    <span class="truncate font-sans font-black">×͜× J I H A D 亗</span>
+                    <i class="fa-solid fa-copy text-rose-400 text-[8px]"></i>
+                  </div>
+                  <div class="flex justify-between items-center text-[9px] font-bold text-zinc-500">
+                    <span class="truncate font-sans font-black">꧁༺ FF ༻꧂</span>
+                    <i class="fa-solid fa-copy text-rose-300 text-[8px]"></i>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer CTA -->
+              <div class="w-full flex items-center justify-between text-[10px] font-bold text-rose-600 border-t border-zinc-100 pt-2">
+                <span>Generate</span>
+                <span class="group-hover:translate-x-1 transition-transform">➔</span>
+              </div>
+            </button>
+
+            <!-- Tool 3: Fancy Text Generator -->
+            <button id="btn-card-fancy" class="text-left bg-white border border-zinc-200/80 hover:border-rose-400/80 hover:shadow-md hover:translate-y-[-2px] rounded-2xl p-4 transition-all duration-300 group flex flex-col justify-between min-h-[250px] w-full cursor-pointer focus:outline-none">
+              <!-- Top Row -->
+              <div class="w-full flex items-center justify-between">
+                <div class="w-9 h-9 rounded-xl bg-indigo-50 flex items-center justify-center text-indigo-600 text-sm group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-wand-magic-sparkles text-xs"></i>
+                </div>
+                <span class="text-[9px] font-extrabold text-indigo-600 uppercase tracking-wider bg-indigo-50 border border-indigo-100/50 px-2 py-0.5 rounded-md">Fonts</span>
+              </div>
+              
+              <!-- Content and Mock Preview -->
+              <div class="w-full my-4 space-y-2">
+                <div class="space-y-0.5">
+                  <h3 class="text-sm font-extrabold text-zinc-900 group-hover:text-rose-600 transition-colors">Fancy Text</h3>
+                  <p class="text-[10px] text-zinc-400 leading-tight">Plain text converter</p>
+                </div>
+                <!-- Mini text previews -->
+                <div class="w-full bg-zinc-50 rounded-lg p-2 border border-zinc-100/80 flex flex-col gap-1.5">
+                  <div class="flex items-center justify-between text-[9px] text-zinc-700">
+                    <span class="font-bold font-serif italic">𝔉𝔞𝔫𝔠𝔶 𝔗𝔢𝔵𝔱</span>
+                    <span class="text-[7px] text-zinc-400 font-mono">Medieval</span>
+                  </div>
+                  <div class="flex items-center justify-between text-[9px] text-zinc-700">
+                    <span class="font-bold font-sans tracking-wide">𝐹𝒶𝓃𝒸𝓎 𝒯𝑒𝓏𝓉</span>
+                    <span class="text-[7px] text-zinc-400 font-mono">Cursive</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Footer CTA -->
+              <div class="w-full flex items-center justify-between text-[10px] font-bold text-rose-600 border-t border-zinc-100 pt-2">
+                <span>Convert</span>
+                <span class="group-hover:translate-x-1 transition-transform">➔</span>
+              </div>
+            </button>
+
+            <!-- Tool 4: FF Stylish Symbols -->
+            <button id="btn-card-symbols" class="text-left bg-white border border-zinc-200/80 hover:border-rose-400/80 hover:shadow-md hover:translate-y-[-2px] rounded-2xl p-4 transition-all duration-300 group flex flex-col justify-between min-h-[250px] w-full cursor-pointer focus:outline-none">
+              <!-- Top Row -->
+              <div class="w-full flex items-center justify-between">
+                <div class="w-9 h-9 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600 text-sm group-hover:scale-110 transition-transform">
+                  <i class="fa-solid fa-bolt text-xs"></i>
+                </div>
+                <span class="text-[9px] font-extrabold text-emerald-600 uppercase tracking-wider bg-emerald-50 border border-emerald-100/50 px-2 py-0.5 rounded-md">Hot Copy</span>
+              </div>
+              
+              <!-- Content and Mock Preview -->
+              <div class="w-full my-4 space-y-2">
+                <div class="space-y-0.5">
+                  <h3 class="text-sm font-extrabold text-zinc-900 group-hover:text-rose-600 transition-colors">Stylish Symbols</h3>
+                  <p class="text-[10px] text-zinc-400 leading-tight">Brackets & gaming symbols</p>
+                </div>
+                <!-- Interactive click to copy right from homepage card! -->
+                <div class="w-full grid grid-cols-4 gap-1.5 pt-0.5">
+                  <span class="btn-quick-copy flex items-center justify-center p-2 rounded-xl bg-rose-50/50 hover:bg-rose-100/80 text-rose-600 font-black text-xs border border-rose-100/30 transition-all duration-200 cursor-pointer hover:scale-105" data-copy="亗" title="Copy 亗">亗</span>
+                  <span class="btn-quick-copy flex items-center justify-center p-2 rounded-xl bg-rose-50/50 hover:bg-rose-100/80 text-rose-600 font-black text-xs border border-rose-100/30 transition-all duration-200 cursor-pointer hover:scale-105" data-copy="❖" title="Copy ❖">❖</span>
+                  <span class="btn-quick-copy flex items-center justify-center p-2 rounded-xl bg-rose-50/50 hover:bg-rose-100/80 text-rose-600 font-black text-xs border border-rose-100/30 transition-all duration-200 cursor-pointer hover:scale-105" data-copy="࿐" title="Copy ࿐">࿐</span>
+                  <span class="btn-quick-copy flex items-center justify-center p-2 rounded-xl bg-rose-50/50 hover:bg-rose-100/80 text-rose-600 font-black text-xs border border-rose-100/30 transition-all duration-200 cursor-pointer hover:scale-105" data-copy="⚡" title="Copy ⚡">⚡</span>
+                </div>
+              </div>
+
+              <!-- Footer CTA -->
+              <div class="w-full flex items-center justify-between text-[10px] font-bold text-rose-600 border-t border-zinc-100 pt-2">
+                <span>Browse All</span>
+                <span class="group-hover:translate-x-1 transition-transform">➔</span>
+              </div>
+            </button>
+
+          </div>
+        </section>
+
+        <!-- Elegant Workspace Guarantee Badges -->
+        <section class="max-w-4xl mx-auto bg-gradient-to-r from-zinc-50 via-white to-zinc-50 border border-zinc-200/80 rounded-2xl p-5 sm:p-6 shadow-sm select-none">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 shrink-0 shadow-inner">
+                <i class="fa-solid fa-square-poll-horizontal text-lg"></i>
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-xs font-black text-zinc-900 uppercase tracking-wider">Instant Preview</h4>
+                <p class="text-[11px] text-zinc-500 leading-relaxed">See formatting parameter overrides, glow outputs, and standard bio alignments instantly as you type.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4 md:border-l md:border-zinc-150 md:pl-6">
+              <div class="w-12 h-12 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 shrink-0 shadow-inner">
+                <i class="fa-solid fa-user-shield text-lg"></i>
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-xs font-black text-zinc-900 uppercase tracking-wider">No Login Required</h4>
+                <p class="text-[11px] text-zinc-500 leading-relaxed">Access the ultimate repository of competitive tag presets and symbols instantly. No tracking, no signup needed.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4 md:border-l md:border-zinc-150 md:pl-6">
+              <div class="w-12 h-12 rounded-xl bg-rose-50 border border-rose-100 flex items-center justify-center text-rose-600 shrink-0 shadow-inner">
+                <i class="fa-solid fa-bolt text-lg"></i>
+              </div>
+              <div class="space-y-1">
+                <h4 class="text-xs font-black text-zinc-900 uppercase tracking-wider">One-Click Copy</h4>
+                <p class="text-[11px] text-zinc-500 leading-relaxed">Instantly sync customized nicknames, rare symbols, or color signatures directly to your game with zero lag.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Gamer Reviews Section -->
+        <section class="space-y-6 pt-6">
+          <div class="border-b border-zinc-200 pb-3">
+            <h2 class="text-xs font-bold text-zinc-900 tracking-wider select-none inline-block border-b-2 border-rose-600 pb-1 uppercase">
+              Community Reviews & Feedback
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- Review 1 -->
+            <div class="bg-white border border-zinc-200/80 rounded-xl p-5 shadow-sm flex flex-col justify-between gap-4 hover:shadow transition-shadow">
+              <div class="space-y-3">
+                <div class="flex items-center gap-1">
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                </div>
+                <p class="text-xs text-zinc-600 leading-relaxed italic">
+                  "No more wasting precious diamonds testing color schemes. This real-time emulator is highly accurate and saved me hours."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 border-t border-zinc-100 pt-3 select-none">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80" alt="Viper_FF avatar" class="w-8 h-8 rounded-full object-cover border border-zinc-100" referrerpolicy="no-referrer">
+                <div>
+                  <h4 class="text-xs font-bold text-zinc-900">Viper_FF</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-white border border-zinc-200/80 rounded-xl p-5 shadow-sm flex flex-col justify-between gap-4 hover:shadow transition-shadow">
+              <div class="space-y-3">
+                <div class="flex items-center gap-1">
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                </div>
+                <p class="text-xs text-zinc-600 leading-relaxed italic">
+                  "The instant click-to-edit pencil tool is magical. Loads the code right back inside the workspace instantly. Superb utility."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 border-t border-zinc-100 pt-3 select-none">
+                <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=100&h=100&q=80" alt="AuraGamer avatar" class="w-8 h-8 rounded-full object-cover border border-zinc-100" referrerpolicy="no-referrer">
+                <div>
+                  <h4 class="text-xs font-bold text-zinc-900">AuraGamer</h4>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-white border border-zinc-200/80 rounded-xl p-5 shadow-sm flex flex-col justify-between gap-4 hover:shadow transition-shadow">
+              <div class="space-y-3">
+                <div class="flex items-center gap-1">
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                  <svg class="w-4 h-4 text-[#f59e0b]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                </div>
+                <p class="text-xs text-zinc-600 leading-relaxed italic">
+                  "Ultra-minimal, lightning fast, and has zero bloated advertisements. Standard-compliant formatting parameters at their best."
+                </p>
+              </div>
+              <div class="flex items-center gap-3 border-t border-zinc-100 pt-3 select-none">
+                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=100&h=100&q=80" alt="Rex_Esports avatar" class="w-8 h-8 rounded-full object-cover border border-zinc-100" referrerpolicy="no-referrer">
+                <div>
+                  <h4 class="text-xs font-bold text-zinc-900">Rex_Esports</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About the Author (Homepage version) -->
+        <section class="max-w-4xl mx-auto space-y-6 pt-6">
+          <div class="border-b border-zinc-200 pb-3">
+            <h2 class="text-xs font-bold text-zinc-900 tracking-wider select-none inline-block border-b-2 border-rose-600 pb-1 uppercase">
+              Meet the Designer & Developer
+            </h2>
+          </div>
+          <div class="bg-white border border-zinc-200/80 rounded-2xl p-6 sm:p-8 shadow-sm flex flex-col md:flex-row items-center gap-6 sm:gap-8">
+            <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden shrink-0 border-2 border-rose-500/15 shadow-md bg-zinc-900 flex items-center justify-center">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=250&h=250&q=80" alt="Mariner Jihad Portrait" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+            </div>
+            <div class="space-y-4 flex-1 text-center md:text-left">
+              <div class="space-y-1">
+                <h3 class="text-xl font-bold text-zinc-900">Mariner Jihad</h3>
+                <p class="text-xs text-rose-600 font-semibold tracking-wide uppercase">Competitive Gaming Tools & UI Designer</p>
+              </div>
+              <p class="text-sm text-zinc-600 leading-relaxed">
+                Hi there! I am <strong>Mariner Jihad</strong>. I designed and coded FF Studio as a responsive, high-fidelity offline utility for competitive esports player cards. My core mission is to empower teams to design pristine signatures, generate aesthetic gaming nicknames, and copy professional clan symbols without wasting diamonds inside the active Garena game client.
+              </p>
+              <div class="flex flex-wrap items-center justify-center md:justify-start gap-3 pt-1">
+                <button id="btn-home-view-author-profile" class="px-4 py-2 bg-zinc-900 hover:bg-zinc-850 text-white text-xs font-bold rounded-lg transition-colors cursor-pointer active:scale-95 flex items-center gap-1.5">
+                  <i class="fa-solid fa-user"></i>
+                  <span>View Full Profile</span>
+                </button>
+                <a href="/contact.html" class="px-4 py-2 border border-zinc-200 hover:bg-zinc-50 text-zinc-700 text-xs font-bold rounded-lg transition-colors flex items-center gap-1.5">
+                  <i class="fa-solid fa-envelope"></i>
+                  <span>Get In Touch</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div> <!-- END VIEW 0: LANDING WORKSPACE -->
+
+      <!-- VIEW 1: FF BIO BUILDER PAGE -->
+      <div id="view-bio" class="space-y-8 hidden transition-all duration-300 transform opacity-0 translate-y-4">
+        <section class="text-center space-y-3 max-w-2xl mx-auto py-2">
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950 sm:leading-none">
+          Free Fire Bio Builder
+        </h1>
+        <p class="text-sm sm:text-base text-zinc-500 leading-relaxed max-w-xl mx-auto">
+          Craft gorgeous, colorful, and glowing profile bios with real-time preview simulation. Tailored strictly to Free Fire client specifications.
+        </p>
+      </section>
+
+      <!-- COLLAPSED/EXPANDING QUICK HELP NOTE SECTION -->
+      <section class="max-w-3xl mx-auto">
+        <div class="border border-zinc-200 bg-white rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow duration-300">
+          <button id="btn-toggle-note" class="w-full flex items-center justify-between p-4 font-semibold text-zinc-800 hover:bg-zinc-50 transition-colors text-sm cursor-pointer select-none">
+            <div class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+              </svg>
+              <span>Free Fire Signature Rules & Guide</span>
+            </div>
+            <!-- Arrow icon rotates on expand/collapse -->
+            <svg id="arrow-icon-note" class="w-4 h-4 text-zinc-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+          </button>
+          
+          <div id="quick-note-content" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out">
+            <div class="px-5 pb-5 text-xs text-zinc-500 border-t border-zinc-100 pt-4">
+              <p class="leading-relaxed font-medium">
+                Standard Garena FF clients normally limit bios to 50 characters and 3 lines, but limits are <strong>disabled</strong> in this studio workspace for unlimited creative drafting! Use <code class="font-mono bg-zinc-100 text-rose-600 px-1 py-0.5 rounded font-bold">[b]</code> for bold, <code class="font-mono bg-zinc-100 text-rose-600 px-1 py-0.5 rounded font-bold">[c]</code> for highlight, <code class="font-mono bg-zinc-100 text-rose-600 px-1 py-0.5 rounded font-bold">[i]</code> for italic and <code class="font-mono bg-zinc-100 text-rose-600 px-1 py-0.5 rounded font-bold">[u]</code> for underline.
+              </p>
+              <div class="mt-3.5 grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-[11px] font-mono bg-zinc-50 p-3 rounded-lg border border-zinc-200">
+                <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span><span>[b] Bold</span></div>
+                <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span><span>[c] Highlight/Glow</span></div>
+                <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span><span>[i] Italic</span></div>
+                <div class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-rose-500"></span><span>[u] Underline</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- C. THE CREATOR WORKSPACE (Unified Box Container) -->
+      <section class="bg-white border border-zinc-200/80 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden max-w-3xl mx-auto">
+        
+        <!-- 1. Toolbar Control Header -->
+        <div class="bg-zinc-50/50 px-4 py-3 border-b border-zinc-200/80 flex flex-wrap items-center justify-between gap-3 select-none">
+          <!-- Text Styling Group -->
+          <div class="flex items-center gap-1 bg-white border border-zinc-200 rounded-lg p-0.5 shadow-sm">
+            <!-- Bold Button -->
+            <button id="btn-bold" class="w-9 h-8 rounded-md flex items-center justify-center font-bold text-sm text-zinc-700 hover:bg-zinc-50 hover:text-rose-600 active:scale-95 transition-all cursor-pointer" title="Inject Bold tag [b]">
+              <i class="fa-solid fa-bold text-xs"></i>
+            </button>
+            <div class="w-[1px] h-4 bg-zinc-200"></div>
+            <!-- Italic Button -->
+            <button id="btn-italic" class="w-9 h-8 rounded-md flex items-center justify-center italic font-serif font-semibold text-sm text-zinc-700 hover:bg-zinc-50 hover:text-rose-600 active:scale-95 transition-all cursor-pointer" title="Inject Italic tag [i]">
+              <i class="fa-solid fa-italic text-xs"></i>
+            </button>
+            <div class="w-[1px] h-4 bg-zinc-200"></div>
+            <!-- Glow Button -->
+            <button id="btn-glow" class="w-9 h-8 rounded-md flex items-center justify-center text-zinc-700 hover:bg-zinc-50 hover:text-rose-600 active:scale-95 transition-all cursor-pointer" title="Inject Glow/Sparkle tag [c]">
+              <i class="fa-solid fa-wand-magic-sparkles text-rose-500 text-xs"></i>
+            </button>
+            <div class="w-[1px] h-4 bg-zinc-200"></div>
+            <!-- Underline Button -->
+            <button id="btn-underline" class="w-9 h-8 rounded-md flex items-center justify-center underline font-semibold text-sm text-zinc-700 hover:bg-zinc-50 hover:text-rose-600 active:scale-95 transition-all cursor-pointer" title="Inject Underline tag [u]">
+              <i class="fa-solid fa-underline text-xs"></i>
+            </button>
+          </div>
+
+          <!-- Color Picker Trigger Modal (Custom palette button replaces raw picker) -->
+          <button id="btn-open-picker" class="flex items-center gap-2 bg-white border border-zinc-200 hover:bg-zinc-50 hover:text-rose-600 rounded-lg py-1.5 px-3 shadow-sm transition-all text-xs font-bold text-zinc-600 cursor-pointer active:scale-95" title="Open Custom Color Palette">
+            <!-- Color palette icon -->
+            <i class="fa-solid fa-palette text-rose-500 text-sm"></i>
+            <span>Color Pick</span>
+          </button>
+        </div>
+
+        <!-- 2. Workspace Box (Split-Pane Grid) -->
+        <div class="flex border-b border-zinc-200/80 items-stretch bg-white">
+          <!-- Gutter Column for Line numbers (1-3 synced) -->
+          <div id="line-gutter" class="w-10 shrink-0 bg-zinc-50/50 border-r border-zinc-100 py-3 flex flex-col gap-0 select-none">
+            <!-- Line numbers injected programmatically, matched perfectly to text line height -->
+          </div>
+          
+          <!-- Text Area Block -->
+          <div class="flex-1 flex flex-col relative">
+            <textarea 
+              id="workspace-textarea" 
+              placeholder="Start drafting here... Use [b] Bold, [FF0055] Custom Color, or load presets below." 
+              rows="3"
+              class="w-full p-3 font-mono text-sm leading-6 border-0 outline-none resize-none overflow-y-auto min-h-[88px] max-h-[250px] text-zinc-800 placeholder-zinc-400 focus:ring-0"
+              spellcheck="false"
+            >[b][FF0000]ESPORT [FFFFFF]PLAYER</textarea>
+          </div>
+        </div>
+
+        <!-- 3. Bottom Status Bar -->
+        <div class="bg-zinc-50/30 px-4 py-2.5 border-b border-zinc-100 flex items-center justify-between select-none">
+          <!-- Character counter tag -->
+          <div id="char-counter" class="text-xs font-mono text-zinc-500 font-semibold">
+            0 characters
+          </div>
+
+          <!-- Utility tool buttons (Extra text labelings removed) -->
+          <div class="flex items-center gap-2">
+            <!-- Eraser Button -->
+            <button id="btn-clear-workspace" class="w-8 h-8 rounded-lg flex items-center justify-center text-zinc-500 hover:text-rose-600 hover:bg-rose-50 border border-zinc-200/60 active:scale-95 transition-all cursor-pointer" title="Wipe Workspace Clean">
+              <i class="fa-solid fa-eraser text-xs"></i>
+            </button>
+
+            <!-- Copy Code Button -->
+            <button id="btn-copy-workspace" class="w-8 h-8 rounded-lg flex items-center justify-center text-white bg-zinc-900 hover:bg-zinc-800 border border-transparent active:scale-95 transition-all shadow-sm cursor-pointer" title="Copy Compiled Bio Code">
+              <i class="fa-solid fa-copy text-xs"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Live Render Window (In-Game Simulator Slate - extra labels removed) -->
+        <div class="p-5 bg-zinc-950">
+          <div class="max-w-md mx-auto bg-[#18181b]/95 border border-[#27272a] rounded-xl p-4 shadow-xl select-none">
+            <!-- Client Emulator Metadata header simplified (No labels) -->
+            <div class="flex items-center justify-between border-b border-[#27272a] pb-2 mb-3">
+              <div class="flex items-center gap-1.5">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-yellow-500"></span>
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+              </div>
+              <div class="w-16 h-1 bg-[#27272a] rounded-full"></div>
+            </div>
+
+            <!-- Signature Inner Box -->
+            <div class="space-y-1">
+              <div class="bg-[#09090b] border border-[#27272a] rounded-lg p-3 min-h-[64px] flex items-center justify-start overflow-hidden">
+                <div id="live-preview-box" class="w-full text-zinc-100 font-sans text-sm tracking-wide break-all leading-normal whitespace-pre-wrap">
+                  <!-- Real-time compiled styling tags will inject here dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- D. READY-MADE BIO CODES (Dynamic Stacked Categories) -->
+      <section class="space-y-6 pt-4">
+        <!-- Section Header -->
+        <div class="border-b border-zinc-200 pb-3">
+          <div class="space-y-2">
+            <h2 class="text-xl font-bold text-zinc-900 tracking-tight select-none inline-block border-b-2 border-rose-600 pb-1">
+              Ready-Made Presets Matrix
+            </h2>
+            <p class="text-xs text-zinc-500 pt-1">Instant-click precompiled structures organized for professional gamer profiles.</p>
+          </div>
+
+          <!-- Dynamic Category Navigation Dropdown Widget -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-4 bg-zinc-50 border border-zinc-200/80 p-3 rounded-xl select-none">
+            <div class="flex flex-col gap-0.5">
+              <span class="text-xs font-bold text-zinc-700">Quick Category Navigator</span>
+              <span class="text-[11px] text-zinc-400">Scroll instantly to any preset category signature layouts.</span>
+            </div>
+            <div class="flex items-center gap-2 w-full sm:w-auto relative">
+              <div class="relative w-full sm:w-64">
+                <button id="custom-dropdown-trigger" class="w-full flex items-center justify-between py-2 px-3 border border-zinc-200 bg-white text-xs font-semibold rounded-lg text-zinc-700 outline-none hover:border-zinc-300 focus:ring-1 focus:ring-rose-500 transition-all cursor-pointer">
+                  <span id="custom-dropdown-selected-text">Select Category</span>
+                  <svg id="custom-dropdown-arrow" class="w-4 h-4 text-zinc-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+                <div id="custom-dropdown-menu" class="absolute left-0 right-0 mt-1 bg-white border border-zinc-200 rounded-lg shadow-xl overflow-hidden z-30 transition-all duration-300 ease-in-out origin-top transform scale-y-0 opacity-0 pointer-events-none max-h-60 overflow-y-auto">
+                  <!-- Programmatically populated options of category names -->
+                </div>
+              </div>
+              <button id="btn-jump-to-category" class="py-2 px-4 bg-zinc-900 hover:bg-zinc-850 text-white text-xs font-bold rounded-lg transition-colors cursor-pointer shrink-0 active:scale-95">
+                Go
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stacked list elements grid - Categories shown one after another -->
+        <div id="presets-items-grid" class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <!-- Loaded dynamically via app.js -->
+        </div>
+      </section>
+
+      <!-- OTHER TOOLS NAVIGATION -->
+      <section class="max-w-3xl mx-auto pt-8 border-t border-zinc-150 select-none pb-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div class="text-center sm:text-left">
+            <h4 class="text-xs font-black text-zinc-900 uppercase tracking-wider">Explore Companion Tools</h4>
+            <p class="text-[10px] sm:text-xs text-zinc-500">Switch to our other Free Fire creators instantly.</p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-2">
+            <button id="btn-link-bio-to-namegen" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+              <i class="fa-solid fa-gamepad text-[10px]"></i>
+              <span>Name Generator</span>
+            </button>
+            <button id="btn-link-bio-to-fancy" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+              <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i>
+              <span>Fancy Text</span>
+            </button>
+            <button id="btn-link-bio-to-symbols" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+              <i class="fa-solid fa-bolt text-[10px]"></i>
+              <span>Stylish Symbols</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      </div> <!-- END VIEW 1: HOME WORKSPACE -->
+
+      <!-- VIEW 2: FANCY TEXT GENERATOR -->
+      <div id="view-fancy-text" class="space-y-8 hidden transition-all duration-300 transform opacity-0 translate-y-4">
+        <!-- Fancy Text Hero -->
+        <section class="text-center space-y-3 max-w-2xl mx-auto py-2">
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950 sm:leading-none">
+            Fancy Text Generator
+          </h1>
+          <p class="text-sm sm:text-base text-zinc-500 leading-relaxed max-w-xl mx-auto">
+            Convert your standard gaming nickname into stylish unicode characters and symbols. Perfect for Garena Free Fire.
+          </p>
+        </section>
+
+        <!-- FF Name limit Guide (matching Bio Studio style exactly) -->
+        <section class="max-w-3xl mx-auto">
+          <div class="border border-zinc-200 bg-white rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow duration-300">
+            <button id="btn-toggle-note-fancy" class="w-full flex items-center justify-between p-4 font-semibold text-zinc-800 hover:bg-zinc-50 transition-colors text-sm cursor-pointer select-none">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                <span>Free Fire Nickname Characters Guide</span>
+              </div>
+              <!-- Arrow icon rotates on expand/collapse -->
+              <svg id="arrow-icon-note-fancy" class="w-4 h-4 text-zinc-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            
+            <div id="quick-note-content-fancy" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out">
+              <div class="px-5 pb-5 text-xs text-zinc-500 border-t border-zinc-100 pt-4">
+                <p class="leading-relaxed font-medium text-left">
+                  Garena Free Fire strictly sets a <strong>12 characters maximum</strong> limit on in-game nicknames, but limits are <strong>disabled</strong> in this studio workspace for unlimited creative drafting!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Workspace Generator Input Area -->
+        <section class="bg-white border border-zinc-200/80 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden max-w-3xl mx-auto">
+          <div class="p-4 bg-zinc-50/20 space-y-3">
+            <!-- Quick Link to Symbols Page Banner -->
+            <button id="btn-quick-symbols" class="w-full flex items-center justify-between gap-3 p-3 bg-rose-50/50 hover:bg-rose-50 border border-rose-100/60 hover:border-rose-100 rounded-xl group transition-all duration-300 cursor-pointer text-left">
+              <div class="flex items-center gap-2.5">
+                <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-rose-100/60 text-rose-600 text-sm group-hover:scale-110 transition-transform">⚡</span>
+                <div class="flex flex-col">
+                  <span class="text-xs font-bold text-rose-950">Looking for awesome decorators?</span>
+                  <span class="text-[10.5px] text-zinc-500 font-medium">Explore stylish symbols, clan tags, and special letters for your name.</span>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold text-rose-600 bg-white border border-rose-100 py-1 px-2.5 rounded-lg shadow-sm group-hover:translate-x-0.5 transition-transform shrink-0">
+                Explore Symbols ➔
+              </span>
+            </button>
+
+            <div class="relative flex items-center bg-white border border-zinc-200 rounded-xl overflow-hidden focus-within:border-rose-500 focus-within:ring-1 focus-within:ring-rose-500 transition-all">
+              <input 
+                type="text" 
+                id="fancy-input-text" 
+                value="K I N G" 
+                placeholder="Type your nickname here..." 
+                class="w-full pl-4 pr-32 py-3.5 font-mono text-base text-zinc-800 placeholder-zinc-400 bg-transparent border-none outline-none focus:ring-0"
+                spellcheck="false"
+              >
+              <!-- Absolute right-aligned elements inside input container -->
+              <div class="absolute right-2.5 flex items-center gap-2 select-none">
+                <!-- Char counter -->
+                <div id="fancy-char-counter" class="text-[10px] font-mono font-bold text-zinc-500 bg-zinc-50 border border-zinc-150 py-1.5 px-2 rounded-lg shrink-0">
+                  5 chars
+                </div>
+                <!-- Clear Button -->
+                <button id="btn-clear-fancy" class="p-1.5 border border-zinc-200 hover:bg-rose-50 hover:border-rose-100 hover:text-rose-600 text-zinc-400 rounded-lg active:scale-90 transition-all cursor-pointer shrink-0" title="Clear Nickname">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Previews list generated by app.js -->
+        <section id="fancy-previews-container" class="max-w-3xl mx-auto space-y-8 pb-6">
+          <!-- Populated programmatically in app.js -->
+        </section>
+
+        <!-- OTHER TOOLS NAVIGATION -->
+        <section class="max-w-3xl mx-auto pt-8 border-t border-zinc-150 select-none pb-6">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-left">
+              <h4 class="text-xs font-black text-zinc-900 uppercase tracking-wider">Explore Companion Tools</h4>
+              <p class="text-[10px] sm:text-xs text-zinc-500">Switch to our other Free Fire creators instantly.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-2">
+              <button id="btn-link-fancy-to-bio" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+                <i class="fa-solid fa-signature text-[10px]"></i>
+                <span>Bio Builder</span>
+              </button>
+              <button id="btn-link-fancy-to-namegen" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+                <i class="fa-solid fa-gamepad text-[10px]"></i>
+                <span>Name Generator</span>
+              </button>
+              <button id="btn-link-fancy-to-symbols" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+                <i class="fa-solid fa-bolt text-[10px]"></i>
+                <span>Stylish Symbols</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div> <!-- END VIEW 2: FANCY TEXT GENERATOR -->
+
+      <!-- VIEW 4: FF STYLISH SYMBOLS PAGE -->
+      <div id="view-symbols" class="space-y-8 hidden transition-all duration-300 transform opacity-0 translate-y-4">
+        <!-- Symbols Hero -->
+        <section class="text-center space-y-3 max-w-2xl mx-auto py-2">
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950 sm:leading-none">
+            FF Stylish Symbols
+          </h1>
+          <p class="text-sm sm:text-base text-zinc-500 leading-relaxed max-w-xl mx-auto">
+            Instant copy-on-click collection of professional clan tags, stylized letters, bracket elements, and decorative unicode symbols.
+          </p>
+        </section>
+
+        <!-- Dynamic Category Navigator for symbols -->
+        <section class="max-w-3xl mx-auto">
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-white border border-zinc-200/80 p-4 rounded-2xl shadow-sm">
+            <div class="flex flex-col gap-0.5">
+              <span class="text-xs font-bold text-zinc-800 uppercase tracking-wide select-none">Category Filter</span>
+              <span class="text-[11px] text-zinc-400 select-none">Filter or jump directly to specific gaming decoration templates.</span>
+            </div>
+            <div class="flex items-center gap-2 relative">
+              <!-- Custom dropdown widget for symbols -->
+              <div class="relative w-full sm:w-64 select-none">
+                <button id="symbols-dropdown-trigger" class="w-full flex items-center justify-between py-2 px-3 border border-zinc-200 bg-white text-xs font-semibold rounded-lg text-zinc-700 outline-none hover:border-zinc-300 focus:ring-1 focus:ring-rose-500 transition-all cursor-pointer">
+                  <span id="symbols-dropdown-selected-text">All Categories</span>
+                  <svg id="symbols-dropdown-arrow" class="w-4 h-4 text-zinc-400 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                  </svg>
+                </button>
+                <div id="symbols-dropdown-menu" class="absolute left-0 right-0 mt-1 bg-white border border-zinc-200 rounded-lg shadow-xl overflow-hidden z-30 transition-all duration-300 ease-in-out origin-top transform scale-y-0 opacity-0 pointer-events-none max-h-60 overflow-y-auto">
+                  <!-- Programmatically populated options -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dynamic Category-wrapped Cards list filled by app.js -->
+        <section id="symbols-wrapper-cards" class="max-w-3xl mx-auto space-y-6 pb-6">
+          <!-- Populated programmatically via app.js -->
+        </section>
+
+        <!-- OTHER TOOLS NAVIGATION -->
+        <section class="max-w-3xl mx-auto pt-8 border-t border-zinc-150 select-none pb-6">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-left">
+              <h4 class="text-xs font-black text-zinc-900 uppercase tracking-wider">Explore Companion Tools</h4>
+              <p class="text-[10px] sm:text-xs text-zinc-500">Switch to our other Free Fire creators instantly.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-2">
+              <button id="btn-link-symbols-to-bio" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+                <i class="fa-solid fa-signature text-[10px]"></i>
+                <span>Bio Builder</span>
+              </button>
+              <button id="btn-link-symbols-to-namegen" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+                <i class="fa-solid fa-gamepad text-[10px]"></i>
+                <span>Name Generator</span>
+              </button>
+              <button id="btn-link-symbols-to-fancy" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+                <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i>
+                <span>Fancy Text</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div> <!-- END VIEW 4: FF STYLISH SYMBOLS PAGE -->
+
+      <!-- VIEW 5: FREE FIRE NAME GENERATOR -->
+      <div id="view-name-gen" class="space-y-8 hidden transition-all duration-300 transform opacity-0 translate-y-4">
+        <!-- Name Gen Hero -->
+        <section class="text-center space-y-3 max-w-2xl mx-auto py-2">
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950 sm:leading-none">
+            FF Name Generator
+          </h1>
+          <p class="text-sm sm:text-base text-zinc-500 leading-relaxed max-w-xl mx-auto">
+            Generate ultimate Free Fire stylish nicknames with custom font symbols, decorative designs, and copy-paste compatibility.
+          </p>
+        </section>
+
+        <!-- FF Name limit Guide Note (similar to Bio Builder Note) -->
+        <section class="max-w-3xl mx-auto">
+          <div class="border border-zinc-200 bg-white rounded-xl overflow-hidden shadow-sm hover:shadow transition-shadow duration-300">
+            <button id="btn-toggle-note-namegen" class="w-full flex items-center justify-between p-4 font-semibold text-zinc-800 hover:bg-zinc-50 transition-colors text-sm cursor-pointer select-none">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                </svg>
+                <span>Free Fire Nickname Character Rules & Guide</span>
+              </div>
+              <svg id="arrow-icon-note-namegen" class="w-4 h-4 text-zinc-500 transition-transform duration-300 transform" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+              </svg>
+            </button>
+            
+            <div id="quick-note-content-namegen" class="overflow-hidden max-h-0 opacity-0 transition-all duration-500 ease-in-out">
+              <div class="px-5 pb-5 text-xs text-zinc-500 border-t border-zinc-100 pt-4 space-y-2 text-left">
+                <p class="leading-relaxed font-medium">
+                  Standard Garena Free Fire client accounts strictly limit custom nicknames to a <strong>12 character limit</strong> (including space and special symbols). 
+                </p>
+                <p class="leading-relaxed">
+                  • Try to keep your generated nickname under 12 characters to ensure successful copy-paste without Garena truncating your stylish tag!
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Input Section -->
+        <section class="bg-white border border-zinc-200/80 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden max-w-3xl mx-auto">
+          <div class="p-4 bg-zinc-50/20 space-y-3">
+            <!-- Quick Link to Symbols Page Banner -->
+            <button id="btn-quick-symbols-namegen" class="w-full flex items-center justify-between gap-3 p-3 bg-rose-50/50 hover:bg-rose-50 border border-rose-100/60 hover:border-rose-100 rounded-xl group transition-all duration-300 cursor-pointer text-left">
+              <div class="flex items-center gap-2.5">
+                <span class="flex items-center justify-center w-7 h-7 rounded-lg bg-rose-100/60 text-rose-600 text-sm group-hover:scale-110 transition-transform">⚡</span>
+                <div class="flex flex-col">
+                  <span class="text-xs font-bold text-rose-950">Looking for awesome decorators?</span>
+                  <span class="text-[10.5px] text-zinc-500 font-medium">Explore stylish symbols, clan tags, and special letters for your name.</span>
+                </div>
+              </div>
+              <span class="text-[11px] font-bold text-rose-600 bg-white border border-rose-100 py-1 px-2.5 rounded-lg shadow-sm group-hover:translate-x-0.5 transition-transform shrink-0">
+                Explore Symbols ➔
+              </span>
+            </button>
+
+            <div class="relative flex items-center bg-white border border-zinc-200 rounded-xl overflow-hidden focus-within:border-rose-500 focus-within:ring-1 focus-within:ring-rose-500 transition-all">
+              <input 
+                type="text" 
+                id="namegen-input-text" 
+                value="K I N G" 
+                placeholder="Type your name/nickname here..." 
+                class="w-full pl-4 pr-32 py-3.5 font-mono text-base text-zinc-800 placeholder-zinc-400 bg-transparent border-none outline-none focus:ring-0"
+                spellcheck="false"
+              >
+              <div class="absolute right-2.5 flex items-center gap-2 select-none">
+                <!-- Char Counter -->
+                <div id="namegen-char-counter" class="text-[10px] font-mono font-bold text-zinc-500 bg-zinc-50 border border-zinc-150 py-1.5 px-2 rounded-lg shrink-0">
+                  5 chars
+                </div>
+                <!-- Clear Button -->
+                <button id="btn-clear-namegen" class="p-1.5 border border-zinc-200 hover:bg-rose-50 hover:border-rose-100 hover:text-rose-600 text-zinc-400 rounded-lg active:scale-90 transition-all cursor-pointer shrink-0" title="Clear Text">
+                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Dynamic Results block filled by app.js -->
+        <section id="namegen-previews-container" class="max-w-3xl mx-auto space-y-8 pb-6">
+          <!-- Populated programmatically in app.js -->
+        </section>
+
+        <!-- OTHER TOOLS NAVIGATION -->
+        <section class="max-w-3xl mx-auto pt-8 border-t border-zinc-150 select-none pb-6">
+          <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-left">
+              <h4 class="text-xs font-black text-zinc-900 uppercase tracking-wider">Explore Companion Tools</h4>
+              <p class="text-[10px] sm:text-xs text-zinc-500">Switch to our other Free Fire creators instantly.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-2">
+              <button id="btn-link-namegen-to-bio" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+                <i class="fa-solid fa-signature text-[10px]"></i>
+                <span>Bio Builder</span>
+              </button>
+              <button id="btn-link-namegen-to-fancy" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+                <i class="fa-solid fa-wand-magic-sparkles text-[10px]"></i>
+                <span>Fancy Text</span>
+              </button>
+              <button id="btn-link-namegen-to-symbols" class="px-3.5 py-2 bg-rose-50 hover:bg-rose-100 text-rose-600 font-bold text-xs rounded-xl border border-rose-100/60 shadow-sm transition-all cursor-pointer active:scale-95 flex items-center gap-1.5">
+                <i class="fa-solid fa-bolt text-[10px]"></i>
+                <span>Stylish Symbols</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div> <!-- END VIEW 5: FREE FIRE NAME GENERATOR -->
+
+      <!-- VIEW 3: AUTHOR PROFILE PAGE -->
+      <div id="view-author" class="space-y-8 hidden transition-all duration-300 transform opacity-0 translate-y-4">
+        <section class="text-center space-y-3 max-w-2xl mx-auto py-2">
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950 sm:leading-none">
+            Developer Portfolio
+          </h1>
+          <p class="text-sm sm:text-base text-zinc-500 leading-relaxed max-w-xl mx-auto">
+            Meet the developer and designer behind Free Fire Bio Studio.
+          </p>
+        </section>
+
+        <!-- Profile Card -->
+        <section class="bg-white border border-zinc-200/80 rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden max-w-2xl mx-auto">
+          <!-- Hero Accent Banner -->
+          <div class="h-32 bg-gradient-to-r from-rose-500 to-rose-600 relative select-none">
+            <div class="absolute -bottom-12 left-6">
+              <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-md bg-zinc-950">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" alt="Mariner Jihad Portrait" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Content -->
+          <div class="pt-16 p-6 space-y-6">
+            <div class="space-y-1 text-left">
+              <div class="flex items-center gap-2 flex-wrap">
+                <h2 class="text-xl font-bold text-zinc-900">Mariner Jihad</h2>
+                <span class="px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-50 text-rose-600 border border-rose-100 uppercase tracking-wide">Developer</span>
+                <span class="px-2 py-0.5 rounded text-[10px] font-bold bg-zinc-900 text-white font-mono uppercase tracking-wide" title="Developer UID">UID: 7507717672</span>
+              </div>
+              <p class="text-xs text-zinc-400">Competitive Gaming Tools & UI Designer</p>
+            </div>
+
+            <!-- Description -->
+            <p class="text-sm text-zinc-600 leading-relaxed text-left">
+              Hi there! I am <strong>Mariner Jihad</strong>. I designed and coded FF Studio as a responsive, high-fidelity offline utility for competitive esports player cards. My core mission is to empower teams to design pristine signatures, generate aesthetic gaming nicknames, and copy professional clan symbols without wasting diamonds inside the active Garena game client.
+            </p>
+
+            <!-- Contact section -->
+            <div class="space-y-3 text-left">
+              <h4 class="text-xs font-bold text-zinc-800 uppercase tracking-wider select-none">Connect with Developer</h4>
+              <div class="grid grid-cols-1 gap-2.5 text-xs text-zinc-600">
+                <a href="/contact.html" class="flex items-center gap-2.5 p-3 rounded-lg border border-rose-100 bg-rose-50/20 hover:bg-rose-50 hover:text-rose-600 transition-colors">
+                  <i class="fa-solid fa-envelope text-rose-500 text-sm shrink-0"></i>
+                  <span class="font-semibold text-zinc-800">Send Direct Message (Contact Page)</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Return home button -->
+            <div class="pt-2 flex justify-start select-none">
+              <button id="btn-author-back-home" class="flex items-center gap-2 py-2.5 px-4 bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs rounded-xl shadow-sm transition-all cursor-pointer active:scale-95">
+                <svg class="w-4 h-4 text-rose-500 rotate-180" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+                <span>Back to Home Workspace</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div> <!-- END VIEW 3: AUTHOR PROFILE PAGE -->
+    </main>
+
+    <!-- G. FOOTER CREDITS (Centered Layout without column headers, highlighted disclaimer) -->
+    <footer class="w-full bg-white border-t border-zinc-200/80 py-10 select-none">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <div class="flex flex-col items-center gap-6 pb-6 border-b border-zinc-100">
+          <!-- Brand and Description -->
+          <div class="space-y-2 flex flex-col items-center">
+            <div class="flex items-center justify-center gap-2">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <img src="https://i.ibb.co.com/4cvpnJY/20260701-202305.png" alt="FF Studio Logo" class="w-full h-full object-contain" referrerpolicy="no-referrer">
+              </div>
+              <span class="font-bold text-sm tracking-tight text-zinc-900">
+                FF <span class="text-rose-600 font-extrabold">Studio</span>
+              </span>
+            </div>
+            <p class="text-xs text-zinc-400 leading-relaxed max-w-md mx-auto text-center">
+              FF Studio is a localized utility designed for competitive teams and gaming rosters to design and format customized glowing profile signatures, stylish nickname texts, and esports symbols.
+            </p>
+          </div>
+
+          <!-- Flattened Resource Links without column names -->
+          <div class="flex flex-wrap items-center justify-center gap-2.5">
+            <button class="btn-info-trigger px-3 py-1.5 rounded-full text-xs font-semibold text-zinc-600 bg-zinc-100/80 border border-zinc-200/60 hover:text-rose-600 hover:bg-rose-50/50 hover:border-rose-200 transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm" data-page="about">
+              <i class="fa-solid fa-circle-info text-[10.5px] text-zinc-400"></i>
+              <span>About Studio</span>
+            </button>
+            <button class="btn-info-trigger px-3 py-1.5 rounded-full text-xs font-semibold text-zinc-600 bg-zinc-100/80 border border-zinc-200/60 hover:text-rose-600 hover:bg-rose-50/50 hover:border-rose-200 transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm" data-page="faq">
+              <i class="fa-solid fa-circle-question text-[10.5px] text-zinc-400"></i>
+              <span>FAQ & Help</span>
+            </button>
+            <button class="btn-info-trigger px-3 py-1.5 rounded-full text-xs font-semibold text-zinc-600 bg-zinc-100/80 border border-zinc-200/60 hover:text-rose-600 hover:bg-rose-50/50 hover:border-rose-200 transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm" data-page="disclaimer">
+              <i class="fa-solid fa-triangle-exclamation text-[10.5px] text-zinc-400"></i>
+              <span>Legal Disclaimer</span>
+            </button>
+            <button class="btn-info-trigger px-3 py-1.5 rounded-full text-xs font-semibold text-zinc-600 bg-zinc-100/80 border border-zinc-200/60 hover:text-rose-600 hover:bg-rose-50/50 hover:border-rose-200 transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm" data-page="terms">
+              <i class="fa-solid fa-file-contract text-[10.5px] text-zinc-400"></i>
+              <span>Terms of Service</span>
+            </button>
+            <button class="btn-info-trigger px-3 py-1.5 rounded-full text-xs font-semibold text-zinc-600 bg-zinc-100/80 border border-zinc-200/60 hover:text-rose-600 hover:bg-rose-50/50 hover:border-rose-200 transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm" data-page="privacy">
+              <i class="fa-solid fa-shield-halved text-[10.5px] text-zinc-400"></i>
+              <span>Privacy Policy</span>
+            </button>
+            <a href="/contact.html" class="px-3 py-1.5 rounded-full text-xs font-semibold text-zinc-600 bg-zinc-100/80 border border-zinc-200/60 hover:text-rose-600 hover:bg-rose-50/50 hover:border-rose-200 transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm">
+              <i class="fa-solid fa-envelope text-[10.5px] text-zinc-400"></i>
+              <span>Contact Us</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Separately Highlighted Disclaimer Banner -->
+        <div class="mt-6 px-4 py-3 bg-rose-50/50 border border-rose-100 rounded-xl flex items-center justify-center gap-2 max-w-lg mx-auto">
+          <svg class="w-4 h-4 text-rose-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+          </svg>
+          <p class="text-xs text-rose-800/90 font-medium leading-none text-center">
+            <strong>Notice:</strong> Unofficial fan tool. Not affiliated with Garena or Free Fire.
+          </p>
+        </div>
+
+        <!-- Copyright Info Row -->
+        <div class="flex flex-col items-center justify-center gap-3 pt-6 text-center">
+          <p class="text-xs text-zinc-400 leading-relaxed text-center">
+            &copy; 2026 FF Studio. All rights reserved.
+          </p>
+          <div class="flex items-center justify-center gap-4 shrink-0">
+            <span class="text-[10px] font-mono text-zinc-400">Locally stored</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" title="System Online"></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+    <!-- H. SLIDE-OUT MENU DRAWER -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-zinc-950/40 backdrop-blur-md z-40 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+    <aside id="nav-sidebar" class="fixed top-0 right-0 h-full w-72 max-w-full bg-white border-l border-zinc-200 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between select-none">
+      <!-- Sidebar Header -->
+      <div class="p-5 border-b border-zinc-100 flex items-center justify-between">
+        <span class="font-bold text-sm text-zinc-900 uppercase tracking-widest">Navigation</span>
+        <button id="btn-close-sidebar" class="p-1.5 rounded-lg hover:bg-zinc-100 text-zinc-400 hover:text-zinc-900 active:scale-95 transition-all cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Sidebar Body Links -->
+      <div class="flex-1 p-5 space-y-5 overflow-y-auto">
+        <!-- Section: Creator Tools (FIRST) -->
+        <div class="space-y-2">
+          <h4 class="text-[10px] font-bold text-rose-500 uppercase tracking-wider px-3 select-none">Creator Tools</h4>
+          <button id="sidebar-link-bio" class="w-full text-left flex items-center justify-between p-3 rounded-lg text-sm font-medium text-rose-700 bg-rose-50/40 border border-rose-100/30 transition-all duration-300 hover:text-rose-700 hover:bg-rose-50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <span class="flex items-center gap-2.5">
+              <i class="fa-solid fa-signature text-rose-500 text-sm w-4 text-center shrink-0"></i>
+              <span>FF Bio Builder</span>
+            </span>
+            <span class="tool-badge text-[8px] font-extrabold uppercase px-1.5 py-0.5 rounded-md bg-rose-500/10 text-rose-600 border border-rose-200/40 tracking-wider">Tool</span>
+          </button>
+          <button id="sidebar-link-namegen" class="w-full text-left flex items-center justify-between p-3 rounded-lg text-sm font-medium text-rose-700 bg-rose-50/40 border border-rose-100/30 transition-all duration-300 hover:text-rose-700 hover:bg-rose-50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <span class="flex items-center gap-2.5">
+              <i class="fa-solid fa-gamepad text-rose-500 text-sm w-4 text-center shrink-0"></i>
+              <span>FF Name Generator</span>
+            </span>
+            <span class="tool-badge text-[8px] font-extrabold uppercase px-1.5 py-0.5 rounded-md bg-rose-500/10 text-rose-600 border border-rose-200/40 tracking-wider">Tool</span>
+          </button>
+          <button id="sidebar-link-fancy" class="w-full text-left flex items-center justify-between p-3 rounded-lg text-sm font-medium text-rose-700 bg-rose-50/40 border border-rose-100/30 transition-all duration-300 hover:text-rose-700 hover:bg-rose-50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <span class="flex items-center gap-2.5">
+              <i class="fa-solid fa-wand-magic-sparkles text-rose-500 text-sm w-4 text-center shrink-0"></i>
+              <span>Fancy Text Generator</span>
+            </span>
+            <span class="tool-badge text-[8px] font-extrabold uppercase px-1.5 py-0.5 rounded-md bg-rose-500/10 text-rose-600 border border-rose-200/40 tracking-wider">Tool</span>
+          </button>
+          <button id="sidebar-link-symbols" class="w-full text-left flex items-center justify-between p-3 rounded-lg text-sm font-medium text-rose-700 bg-rose-50/40 border border-rose-100/30 transition-all duration-300 hover:text-rose-700 hover:bg-rose-50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <span class="flex items-center gap-2.5">
+              <i class="fa-solid fa-bolt text-rose-500 text-sm w-4 text-center shrink-0"></i>
+              <span>FF Stylish Symbols</span>
+            </span>
+            <span class="tool-badge text-[8px] font-extrabold uppercase px-1.5 py-0.5 rounded-md bg-rose-500/10 text-rose-600 border border-rose-200/40 tracking-wider">Tool</span>
+          </button>
+        </div>
+
+        <!-- Section: Pages & Workspaces (SECOND) -->
+        <div class="space-y-2">
+          <h4 class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider px-3 select-none">Pages & Workspaces</h4>
+          <button id="sidebar-link-home" class="w-full text-left flex items-center gap-2.5 p-3 rounded-lg text-sm font-semibold text-zinc-950 bg-zinc-100 border border-zinc-200/80 transition-all duration-300 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <i class="fa-solid fa-house text-zinc-500 text-sm w-4 text-center shrink-0"></i>
+            <span>Home Workspace</span>
+          </button>
+          <a href="/contact.html" class="w-full text-left flex items-center gap-2.5 p-3 rounded-lg text-sm font-medium text-zinc-600 bg-zinc-50 border border-zinc-100 transition-all duration-300 hover:text-zinc-900 hover:bg-zinc-100/50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <i class="fa-solid fa-envelope text-zinc-400 text-sm w-4 text-center shrink-0"></i>
+            <span>Contact Us</span>
+          </a>
+          <button id="sidebar-link-profile-item" class="w-full text-left flex items-center gap-2.5 p-3 rounded-lg text-sm font-medium text-zinc-600 bg-zinc-50 border border-zinc-100 transition-all duration-300 hover:text-zinc-900 hover:bg-zinc-100/50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <i class="fa-solid fa-user text-zinc-400 text-sm w-4 text-center shrink-0"></i>
+            <span>Developer Profile</span>
+          </button>
+        </div>
+
+        <!-- Submenu Separator & List Header -->
+        <div class="pt-2">
+          <h4 class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider mb-2.5 px-3">Help & Information</h4>
+          <!-- Submenu List items -->
+          <div class="space-y-1 bg-zinc-50 p-1.5 rounded-xl border border-zinc-100">
+            <button class="btn-info-trigger w-full text-left py-2 px-3 text-xs font-semibold text-zinc-600 hover:text-rose-600 hover:bg-white hover:translate-x-1 hover:shadow-sm rounded-lg transition-all duration-200 cursor-pointer" data-page="about">
+              • About Studio
+            </button>
+            <button class="btn-info-trigger w-full text-left py-2 px-3 text-xs font-semibold text-zinc-600 hover:text-rose-600 hover:bg-white hover:translate-x-1 hover:shadow-sm rounded-lg transition-all duration-200 cursor-pointer" data-page="symbols">
+              • Special Symbols
+            </button>
+            <button class="btn-info-trigger w-full text-left py-2 px-3 text-xs font-semibold text-zinc-600 hover:text-rose-600 hover:bg-white hover:translate-x-1 hover:shadow-sm rounded-lg transition-all duration-200 cursor-pointer" data-page="faq">
+              • F.A.Q. Help
+            </button>
+            <button class="btn-info-trigger w-full text-left py-2 px-3 text-xs font-semibold text-zinc-600 hover:text-rose-600 hover:bg-white hover:translate-x-1 hover:shadow-sm rounded-lg transition-all duration-200 cursor-pointer" data-page="disclaimer">
+              • Legal Disclaimer
+            </button>
+            <button class="btn-info-trigger w-full text-left py-2 px-3 text-xs font-semibold text-zinc-600 hover:text-rose-600 hover:bg-white hover:translate-x-1 hover:shadow-sm rounded-lg transition-all duration-200 cursor-pointer" data-page="privacy">
+              • Privacy Policy
+            </button>
+            <button class="btn-info-trigger w-full text-left py-2 px-3 text-xs font-semibold text-zinc-600 hover:text-rose-600 hover:bg-white hover:translate-x-1 hover:shadow-sm rounded-lg transition-all duration-200 cursor-pointer" data-page="terms">
+              • Terms of Service
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Footer (Author Profile Button) -->
+      <button id="btn-sidebar-author" class="w-full p-4 border-t border-zinc-100 bg-zinc-50/50 flex items-center justify-between hover:bg-zinc-100/85 transition-all duration-300 group focus:outline-none cursor-pointer text-left select-none">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-full overflow-hidden flex items-center justify-center border border-zinc-200 bg-zinc-900 shadow-sm group-hover:scale-105 transition-transform duration-300">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" alt="Mariner Jihad Portrait" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-xs tracking-tight text-zinc-900 leading-tight group-hover:text-rose-600 transition-colors">Mariner Jihad</span>
+            <span class="text-[9px] text-zinc-400 font-medium leading-none">Developer Profile</span>
+          </div>
+        </div>
+        <!-- Rightward arrow to go to profile page -->
+        <svg class="w-4 h-4 text-rose-500 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </button>
+    </aside>
+
+    <!-- Radial Wheel Color Picker Modal Popup -->
+    <div id="picker-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-zinc-950/60 backdrop-blur-md hidden transition-all duration-300 select-none">
+      <div class="bg-white border border-zinc-200/80 rounded-2xl w-full max-w-md shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300" id="picker-modal-content">
+        
+        <!-- Header -->
+        <div class="p-4 border-b border-zinc-100 flex items-center justify-between bg-zinc-50/50">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-rose-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.7-2.831m-11.9 4.905l5.054-5.054m-2.875 2.875L1.75 19.5m16.5-16.5a2.25 2.25 0 113.182 3.182l-5.484 5.484-3.182-3.182L18.25 3z" />
+            </svg>
+            <span class="font-bold text-sm text-zinc-900 uppercase tracking-wider">Radial Color Wheel</span>
+          </div>
+          <button id="btn-close-picker-modal" class="p-1.5 rounded-lg hover:bg-zinc-100 text-zinc-400 hover:text-zinc-900 transition-colors cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Body: Canvas-based HSV wheel -->
+        <div class="p-6 space-y-5">
+          <div class="flex flex-col gap-4">
+            
+            <!-- Color Wheel Canvas Container -->
+            <div class="flex justify-center py-1">
+              <canvas id="color-wheel-canvas" width="220" height="220" class="cursor-crosshair rounded-full shadow-md border border-zinc-200/80 bg-white"></canvas>
+            </div>
+
+            <!-- Brightness (Value) Range Slider -->
+            <div class="space-y-1.5">
+              <div class="flex justify-between text-xs font-bold text-zinc-500 uppercase tracking-wide">
+                <span>Brightness</span>
+                <span id="picker-v-val" class="font-mono text-amber-500 font-extrabold">100%</span>
+              </div>
+              <input type="range" id="picker-brightness-slider" min="0" max="100" value="100" class="w-full h-1.5 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-rose-600">
+            </div>
+
+            <!-- 10 Suggested Colors Palette Row -->
+            <div class="space-y-1.5">
+              <span class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider text-left">Suggested Glowing Colors</span>
+              <div class="flex items-center gap-2 overflow-x-auto pb-1.5 scrollbar-thin select-none" id="suggested-colors-container">
+                <button type="button" class="btn-suggested-color w-8 h-8 rounded-lg shrink-0 border border-zinc-200 shadow-sm transition-all hover:scale-110 active:scale-95 focus:outline-none cursor-pointer" data-hex="FF0000" style="background-color: #FF0000;" title="Vibrant Red"></button>
+                <button type="button" class="btn-suggested-color w-8 h-8 rounded-lg shrink-0 border border-zinc-200 shadow-sm transition-all hover:scale-110 active:scale-95 focus:outline-none cursor-pointer" data-hex="FFFF00" style="background-color: #FFFF00;" title="Neon Gold/Yellow"></button>
+                <button type="button" class="btn-suggested-color w-8 h-8 rounded-lg shrink-0 border border-zinc-200 shadow-sm transition-all hover:scale-110 active:scale-95 focus:outline-none cursor-pointer" data-hex="00FF00" style="background-color: #00FF00;" title="Neon Green"></button>
+                <button type="button" class="btn-suggested-color w-8 h-8 rounded-lg shrink-0 border border-zinc-200 shadow-sm transition-all hover:scale-110 active:scale-95 focus:outline-none cursor-pointer" data-hex="00FFFF" style="background-color: #00FFFF;" title="Electric Cyan"></button>
+                <button type="button" class="btn-suggested-color w-8 h-8 rounded-lg shrink-0 border border-zinc-200 shadow-sm transition-all hover:scale-110 active:scale-95 focus:outline-none cursor-pointer" data-hex="FFFFFF" style="background-color: #FFFFFF;" title="Pure White"></button>
+                <button type="button" class="btn-suggested-color w-8 h-8 rounded-lg shrink-0 border border-zinc-200 shadow-sm transition-all hover:scale-110 active:scale-95 focus:outline-none cursor-pointer" data-hex="FF00FF" style="background-color: #FF00FF;" title="Bright Pink"></button>
+                <button type="button" class="btn-suggested-color w-8 h-8 rounded-lg shrink-0 border border-zinc-200 shadow-sm transition-all hover:scale-110 active:scale-95 focus:outline-none cursor-pointer" data-hex="FF8000" style="background-color: #FF8000;" title="Bright Orange"></button>
+                <button type="button" class="btn-suggested-color w-8 h-8 rounded-lg shrink-0 border border-zinc-200 shadow-sm transition-all hover:scale-110 active:scale-95 focus:outline-none cursor-pointer" data-hex="8000FF" style="background-color: #8000FF;" title="Rich Purple"></button>
+                <button type="button" class="btn-suggested-color w-8 h-8 rounded-lg shrink-0 border border-zinc-200 shadow-sm transition-all hover:scale-110 active:scale-95 focus:outline-none cursor-pointer" data-hex="38BDF8" style="background-color: #38BDF8;" title="Sky Blue"></button>
+                <button type="button" class="btn-suggested-color w-8 h-8 rounded-lg shrink-0 border border-zinc-200 shadow-sm transition-all hover:scale-110 active:scale-95 focus:outline-none cursor-pointer" data-hex="4ADE80" style="background-color: #4ADE80;" title="Mint Green"></button>
+              </div>
+            </div>
+            
+            <!-- Live Swatch preview & Generated Hex block -->
+            <div class="output flex items-center justify-between gap-4 bg-zinc-50 border border-zinc-200 rounded-xl p-4 mt-2">
+              <div class="flex items-center gap-3">
+                <div class="w-12 h-12 shrink-0 rounded-lg border border-zinc-200 shadow-inner transition-colors duration-200" id="picker-swatch" style="background-color: #E11D48;"></div>
+                <div class="space-y-1 text-left">
+                  <div class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider">In-Game Tag</div>
+                  <code class="output-text font-mono text-xs font-bold bg-white border border-zinc-200 px-2 py-1 rounded-lg text-rose-600 inline-block shadow-sm tracking-wide" id="picker-hex-text">
+                    [E11D48]
+                  </code>
+                </div>
+              </div>
+
+              <!-- Manual Hex Input -->
+              <div class="w-24 space-y-1 text-left">
+                <label for="picker-hex-input" class="block text-[10px] font-bold text-zinc-400 uppercase tracking-wider">Manual Hex</label>
+                <div class="relative flex items-center">
+                  <span class="absolute left-2.5 text-xs text-zinc-400 font-mono">#</span>
+                  <input type="text" id="picker-hex-input" maxlength="6" value="E11D48" class="w-full pl-6 pr-2 py-1.5 text-xs font-mono font-bold bg-white border border-zinc-200 rounded-lg text-zinc-800 focus:outline-none focus:ring-1 focus:ring-rose-500 uppercase shadow-sm">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Bar -->
+        <div class="p-4 border-t border-zinc-100 bg-zinc-50/50 flex gap-2">
+          <button id="btn-cancel-picker" class="flex-1 py-2 px-3 border border-zinc-200 bg-white hover:bg-zinc-50 text-zinc-700 font-bold text-xs rounded-lg active:scale-95 transition-all cursor-pointer">
+            Cancel
+          </button>
+          <button id="btn-select-picker" class="flex-1 py-2 px-3 bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs rounded-lg shadow-sm active:scale-95 transition-all cursor-pointer">
+            Inject Tag
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Elegant Help & Legal Modal Popup -->
+    <div id="info-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-zinc-950/60 backdrop-blur-md hidden transition-all duration-300 select-none">
+      <div class="bg-white border border-zinc-200 rounded-2xl w-full max-w-lg shadow-2xl flex flex-col max-h-[85vh] overflow-hidden transform scale-95 opacity-0 transition-all duration-300" id="info-modal-content">
+        
+        <!-- Modal Header -->
+        <div class="p-5 border-b border-zinc-100 flex items-center justify-between bg-zinc-50/50">
+          <h3 id="info-modal-title" class="font-bold text-base text-zinc-900 tracking-tight flex items-center gap-2">
+            <!-- Injected dynamically -->
+          </h3>
+          <button id="btn-close-info-modal" class="p-1.5 rounded-lg hover:bg-zinc-100 text-zinc-400 hover:text-zinc-900 transition-colors cursor-pointer">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="p-6 overflow-y-auto text-sm text-zinc-600 leading-relaxed space-y-4" id="info-modal-body">
+          <!-- Injected dynamically -->
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="p-4 border-t border-zinc-100 bg-zinc-50/50 flex justify-end">
+          <button id="btn-close-info-modal-footer" class="px-4 py-2 bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs rounded-lg shadow-sm transition-colors cursor-pointer">
+            Close Window
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notifications Floating Stack Container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2.5 max-w-sm pointer-events-none select-none">
+      <!-- Toast nodes are dynamically created and appended here by showToast() in app.js -->
+    </div>
+
+    <!-- Script loading for programmatic bindings -->
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>

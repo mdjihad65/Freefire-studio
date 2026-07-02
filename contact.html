@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - FF Studio</title>
+    <!-- Link the processed stylesheet containing Tailwind and typography -->
+    <link rel="stylesheet" href="/src/style.css">
+    <!-- FontAwesome CSS for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  </head>
+  <body class="bg-[#fafafa] text-[#09090b] font-sans antialiased selection:bg-rose-500 selection:text-white min-h-screen flex flex-col justify-between">
+    <div id="page-wrapper" class="flex flex-col min-h-screen justify-between transition-all duration-[350ms]">
+
+    <!-- A. GLOBAL HEADER -->
+    <header class="w-full bg-white/80 backdrop-blur-md border-b border-zinc-200/80 sticky top-0 z-40 transition-all duration-300">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <!-- Brand Logo -->
+        <a href="/index.html#home" class="flex items-center gap-2.5 group focus:outline-none cursor-pointer text-left">
+          <div class="w-10 h-10 flex items-center justify-center group-hover:scale-105 transition-all duration-300">
+            <img src="https://i.ibb.co.com/4cvpnJY/20260701-202305.png" alt="FF Studio Logo" class="w-full h-full object-contain" referrerpolicy="no-referrer">
+          </div>
+          <span class="font-bold text-base sm:text-lg tracking-tight text-zinc-900">
+            FF <span class="text-rose-600 font-extrabold">Studio</span>
+          </span>
+        </a>
+
+        <!-- Menu Action -->
+        <button id="btn-menu-toggle" class="p-2 rounded-lg hover:bg-zinc-100 border border-zinc-200/60 active:scale-95 transition-all cursor-pointer flex items-center justify-center" aria-label="Toggle navigation menu">
+          <i class="fa-solid fa-bars text-zinc-600 text-base"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- B. MAIN PAGES PORT WRAPPER -->
+    <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-10 sm:py-16">
+      
+      <!-- VIEW: CONTACT FORM WORKSPACE -->
+      <section class="max-w-xl mx-auto space-y-8">
+        <div class="text-center space-y-3">
+          <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950 sm:leading-none">
+            Get in Touch
+          </h1>
+          <p class="text-sm sm:text-base text-zinc-500 leading-relaxed max-w-md mx-auto">
+            Have feedback, custom symbol requests, or business inquiries? Drop us a line. We'll respond as soon as possible.
+          </p>
+        </div>
+
+        <!-- Contact Form Container -->
+        <div class="bg-white border border-zinc-200 rounded-2xl p-6 sm:p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
+          <form id="contact-form" class="space-y-5">
+            
+            <!-- Honeypot anti-spam (invisible to users) -->
+            <div class="hidden" aria-hidden="true">
+              <label for="honey_field" class="block text-xs font-bold text-zinc-500">Do not fill this if you are human</label>
+              <input type="text" id="honey_field" name="honey_field" tabindex="-1" autocomplete="off" class="w-full p-2 border border-zinc-300 rounded">
+            </div>
+
+            <!-- Name -->
+            <div class="space-y-1.5 text-left">
+              <label for="contact-name" class="block text-[11px] font-bold text-zinc-400 uppercase tracking-wider select-none">Your Name <span class="text-rose-500">*</span></label>
+              <input 
+                type="text" 
+                id="contact-name" 
+                required 
+                placeholder="e.g. Maverick Esports" 
+                class="w-full px-4 py-2.5 bg-zinc-50/50 hover:bg-zinc-50 focus:bg-white border border-zinc-200 focus:border-rose-500 focus:ring-1 focus:ring-rose-500 focus:outline-none rounded-xl text-sm font-medium transition-all duration-250 uppercase-letter placeholder:text-zinc-400 placeholder:normal-case shadow-sm"
+              >
+              <p id="error-name" class="hidden text-rose-500 text-[11px] font-semibold mt-1 pl-1"></p>
+            </div>
+
+            <!-- Email -->
+            <div class="space-y-1.5 text-left">
+              <div class="flex justify-between items-center select-none">
+                <label for="contact-email" class="block text-[11px] font-bold text-zinc-400 uppercase tracking-wider">Email Address</label>
+                <span class="text-[9px] font-bold text-zinc-400 uppercase tracking-widest bg-zinc-100 px-1.5 py-0.5 rounded-md">Optional</span>
+              </div>
+              <input 
+                type="email" 
+                id="contact-email" 
+                placeholder="e.g. proplayer@gmail.com" 
+                class="w-full px-4 py-2.5 bg-zinc-50/50 hover:bg-zinc-50 focus:bg-white border border-zinc-200 focus:border-rose-500 focus:ring-1 focus:ring-rose-500 focus:outline-none rounded-xl text-sm font-medium transition-all duration-250 placeholder:text-zinc-400 shadow-sm"
+              >
+              <p id="error-email" class="hidden text-rose-500 text-[11px] font-semibold mt-1 pl-1"></p>
+            </div>
+
+            <!-- Subject -->
+            <div class="space-y-1.5 text-left">
+              <label for="contact-subject" class="block text-[11px] font-bold text-zinc-400 uppercase tracking-wider select-none">Subject <span class="text-rose-500">*</span></label>
+              <input 
+                type="text" 
+                id="contact-subject" 
+                required 
+                placeholder="e.g. Requesting Esports & Pro Clan Symbols" 
+                class="w-full px-4 py-2.5 bg-zinc-50/50 hover:bg-zinc-50 focus:bg-white border border-zinc-200 focus:border-rose-500 focus:ring-1 focus:ring-rose-500 focus:outline-none rounded-xl text-sm font-medium transition-all duration-250 placeholder:text-zinc-400 shadow-sm"
+              >
+              <p id="error-subject" class="hidden text-rose-500 text-[11px] font-semibold mt-1 pl-1"></p>
+            </div>
+
+            <!-- Message -->
+            <div class="space-y-1.5 text-left">
+              <label for="contact-message" class="block text-[11px] font-bold text-zinc-400 uppercase tracking-wider select-none">Your Message <span class="text-rose-500">*</span></label>
+              <textarea 
+                id="contact-message" 
+                required 
+                rows="6" 
+                placeholder="Write your message here... (minimum 10 characters)" 
+                class="w-full px-4 py-2.5 bg-zinc-50/50 hover:bg-zinc-50 focus:bg-white border border-zinc-200 focus:border-rose-500 focus:ring-1 focus:ring-rose-500 focus:outline-none rounded-xl text-sm font-medium transition-all duration-250 placeholder:text-zinc-400 resize-none shadow-sm"
+              ></textarea>
+              <p id="error-message" class="hidden text-rose-500 text-[11px] font-semibold mt-1 pl-1"></p>
+            </div>
+
+            <!-- Global Status Feedback Message (Hidden initially) -->
+            <div id="form-status" class="hidden p-4 rounded-xl border text-xs font-bold leading-relaxed transition-all duration-300"></div>
+
+            <!-- Actions Bar with dual channels -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+              <button 
+                type="submit" 
+                id="btn-submit" 
+                class="w-full py-3.5 px-4 bg-zinc-900 hover:bg-zinc-800 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 active:scale-[0.98]"
+              >
+                <span>Send via Telegram ⚡</span>
+                <svg id="submit-spinner" class="hidden animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </button>
+              <button 
+                type="button" 
+                id="btn-send-email" 
+                class="w-full py-3.5 px-4 bg-rose-600 hover:bg-rose-500 text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 active:scale-[0.98]"
+              >
+                <span>Send via Email ✉️</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Informative note cards below form -->
+        <div class="p-4 bg-rose-50/30 border border-rose-100/60 rounded-xl flex items-start gap-3 text-left">
+          <svg class="w-4 h-4 text-rose-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" />
+          </svg>
+          <div class="space-y-1">
+            <h4 class="text-xs font-bold text-rose-900">Direct & Private Channels</h4>
+            <p class="text-[11.5px] text-zinc-500 leading-relaxed">
+              Your message is formatted and opened directly in your Telegram app or default email client. No database is used, ensuring 100% data privacy and secure transmission.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- G. FOOTER CREDITS (Centered Layout without column headers, highlighted disclaimer) -->
+    <footer class="w-full bg-white border-t border-zinc-200/80 py-10 select-none">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+        <div class="flex flex-col items-center gap-6 pb-6 border-b border-zinc-100">
+          <!-- Brand and Description -->
+          <div class="space-y-2 flex flex-col items-center">
+            <div class="flex items-center justify-center gap-2">
+              <div class="w-8 h-8 flex items-center justify-center">
+                <img src="https://i.ibb.co.com/4cvpnJY/20260701-202305.png" alt="FF Studio Logo" class="w-full h-full object-contain" referrerpolicy="no-referrer">
+              </div>
+              <span class="font-bold text-sm tracking-tight text-zinc-900">
+                FF <span class="text-rose-600 font-extrabold">Studio</span>
+              </span>
+            </div>
+            <p class="text-xs text-zinc-400 leading-relaxed max-w-md mx-auto text-center">
+              FF Studio is a localized utility designed for competitive teams and gaming rosters to design and format customized glowing profile signatures, stylish nickname texts, and esports symbols.
+            </p>
+          </div>
+
+          <!-- Flattened Resource Links without column names -->
+          <div class="flex flex-wrap items-center justify-center gap-2.5">
+            <a href="/index.html#home" class="px-3 py-1.5 rounded-full text-xs font-semibold text-zinc-600 bg-zinc-100/80 border border-zinc-200/60 hover:text-rose-600 hover:bg-rose-50/50 hover:border-rose-200 transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm">
+              <i class="fa-solid fa-house text-[10.5px] text-zinc-400"></i>
+              <span>Home Workspace</span>
+            </a>
+            <a href="/index.html#fancy" class="px-3 py-1.5 rounded-full text-xs font-semibold text-zinc-600 bg-zinc-100/80 border border-zinc-200/60 hover:text-rose-600 hover:bg-rose-50/50 hover:border-rose-200 transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm">
+              <i class="fa-solid fa-wand-magic-sparkles text-[10.5px] text-zinc-400"></i>
+              <span>Fancy Text Generator</span>
+            </a>
+            <a href="/index.html#symbols" class="px-3 py-1.5 rounded-full text-xs font-semibold text-zinc-600 bg-zinc-100/80 border border-zinc-200/60 hover:text-rose-600 hover:bg-rose-50/50 hover:border-rose-200 transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm">
+              <i class="fa-solid fa-bolt text-[10.5px] text-zinc-400"></i>
+              <span>FF Stylish Symbols</span>
+            </a>
+            <a href="/contact.html" class="px-3 py-1.5 rounded-full text-xs font-semibold text-rose-600 bg-rose-50 border border-rose-200/60 hover:text-rose-600 hover:bg-rose-50 transition-all duration-300 cursor-pointer flex items-center gap-1.5 shadow-sm">
+              <i class="fa-solid fa-envelope text-[10.5px] text-rose-500"></i>
+              <span>Contact Us</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Separately Highlighted Disclaimer Banner -->
+        <div class="mt-6 px-4 py-3 bg-rose-50/50 border border-rose-100 rounded-xl flex items-center justify-center gap-2 max-w-lg mx-auto">
+          <svg class="w-4 h-4 text-rose-600 shrink-0" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+          </svg>
+          <p class="text-xs text-rose-800/90 font-medium leading-none text-center">
+            <strong>Notice:</strong> Unofficial fan tool. Not affiliated with Garena or Free Fire.
+          </p>
+        </div>
+
+        <!-- Copyright Info Row -->
+        <div class="flex flex-col items-center justify-center gap-3 pt-6 text-center">
+          <p class="text-xs text-zinc-400 leading-relaxed text-center">
+            &copy; 2026 FF Studio. All rights reserved.
+          </p>
+          <div class="flex items-center justify-center gap-4 shrink-0">
+            <span class="text-[10px] font-mono text-zinc-400">Locally stored</span>
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" title="System Online"></span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+    <!-- H. SLIDE-OUT MENU DRAWER -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-zinc-950/40 backdrop-blur-md z-40 transition-opacity duration-300 opacity-0 pointer-events-none"></div>
+    <aside id="nav-sidebar" class="fixed top-0 right-0 h-full w-72 max-w-full bg-white border-l border-zinc-200 z-50 shadow-2xl transform translate-x-full transition-transform duration-300 ease-in-out flex flex-col justify-between select-none">
+      <!-- Sidebar Header -->
+      <div class="p-5 border-b border-zinc-100 flex items-center justify-between">
+        <span class="font-bold text-sm text-zinc-900 uppercase tracking-widest">Navigation</span>
+        <button id="btn-close-sidebar" class="p-1.5 rounded-lg hover:bg-zinc-100 text-zinc-400 hover:text-zinc-900 active:scale-95 transition-all cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Sidebar Body Links -->
+      <div class="flex-1 p-5 space-y-5 overflow-y-auto">
+        <!-- Section: Creator Tools (FIRST) -->
+        <div class="space-y-2">
+          <h4 class="text-[10px] font-bold text-rose-500 uppercase tracking-wider px-3 select-none">Creator Tools</h4>
+          <a href="/index.html#bio" class="w-full text-left flex items-center justify-between p-3 rounded-lg text-sm font-medium text-rose-700 bg-rose-50/40 border border-rose-100/30 transition-all duration-300 hover:text-rose-700 hover:bg-rose-50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <span class="flex items-center gap-2.5">
+              <i class="fa-solid fa-signature text-rose-500 text-sm w-4 text-center shrink-0"></i>
+              <span>FF Bio Builder</span>
+            </span>
+            <span class="tool-badge text-[8px] font-extrabold uppercase px-1.5 py-0.5 rounded-md bg-rose-500/10 text-rose-600 border border-rose-200/40 tracking-wider">Tool</span>
+          </a>
+          <a href="/index.html#namegen" class="w-full text-left flex items-center justify-between p-3 rounded-lg text-sm font-medium text-rose-700 bg-rose-50/40 border border-rose-100/30 transition-all duration-300 hover:text-rose-700 hover:bg-rose-50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <span class="flex items-center gap-2.5">
+              <i class="fa-solid fa-gamepad text-rose-500 text-sm w-4 text-center shrink-0"></i>
+              <span>FF Name Generator</span>
+            </span>
+            <span class="tool-badge text-[8px] font-extrabold uppercase px-1.5 py-0.5 rounded-md bg-rose-500/10 text-rose-600 border border-rose-200/40 tracking-wider">Tool</span>
+          </a>
+          <a href="/index.html#fancy" class="w-full text-left flex items-center justify-between p-3 rounded-lg text-sm font-medium text-rose-700 bg-rose-50/40 border border-rose-100/30 transition-all duration-300 hover:text-rose-700 hover:bg-rose-50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <span class="flex items-center gap-2.5">
+              <i class="fa-solid fa-wand-magic-sparkles text-rose-500 text-sm w-4 text-center shrink-0"></i>
+              <span>Fancy Text Generator</span>
+            </span>
+            <span class="tool-badge text-[8px] font-extrabold uppercase px-1.5 py-0.5 rounded-md bg-rose-500/10 text-rose-600 border border-rose-200/40 tracking-wider">Tool</span>
+          </a>
+          <a href="/index.html#symbols" class="w-full text-left flex items-center justify-between p-3 rounded-lg text-sm font-medium text-rose-700 bg-rose-50/40 border border-rose-100/30 transition-all duration-300 hover:text-rose-700 hover:bg-rose-50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <span class="flex items-center gap-2.5">
+              <i class="fa-solid fa-bolt text-rose-500 text-sm w-4 text-center shrink-0"></i>
+              <span>FF Stylish Symbols</span>
+            </span>
+            <span class="tool-badge text-[8px] font-extrabold uppercase px-1.5 py-0.5 rounded-md bg-rose-500/10 text-rose-600 border border-rose-200/40 tracking-wider">Tool</span>
+          </a>
+        </div>
+
+        <!-- Section: Pages & Workspaces (SECOND) -->
+        <div class="space-y-2">
+          <h4 class="text-[10px] font-bold text-zinc-400 uppercase tracking-wider px-3 select-none">Pages & Workspaces</h4>
+          <a href="/index.html#home" class="w-full text-left flex items-center gap-2.5 p-3 rounded-lg text-sm font-medium text-zinc-600 bg-zinc-50 border border-zinc-100 transition-all duration-300 hover:text-zinc-900 hover:bg-zinc-100/50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <i class="fa-solid fa-house text-zinc-400 text-sm w-4 text-center shrink-0"></i>
+            <span>Home Workspace</span>
+          </a>
+          <a href="/contact.html" class="w-full text-left flex items-center gap-2.5 p-3 rounded-lg text-sm font-semibold text-zinc-950 bg-zinc-100 border border-zinc-200/80 transition-all duration-300 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <i class="fa-solid fa-envelope text-zinc-500 text-sm w-4 text-center shrink-0"></i>
+            <span>Contact Us</span>
+          </a>
+          <a href="/index.html#author" class="w-full text-left flex items-center gap-2.5 p-3 rounded-lg text-sm font-medium text-zinc-600 bg-zinc-50 border border-zinc-100 transition-all duration-300 hover:text-zinc-900 hover:bg-zinc-100/50 hover:translate-x-1 hover:shadow-sm cursor-pointer">
+            <i class="fa-solid fa-user text-zinc-400 text-sm w-4 text-center shrink-0"></i>
+            <span>Developer Profile</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sidebar Footer (Author Profile Link) -->
+      <a href="/index.html#author" class="w-full p-4 border-t border-zinc-100 bg-zinc-50/50 flex items-center justify-between hover:bg-zinc-100/85 transition-all duration-300 group focus:outline-none cursor-pointer text-left select-none">
+        <div class="flex items-center gap-2.5">
+          <div class="w-9 h-9 rounded-full overflow-hidden flex items-center justify-center border border-zinc-200 bg-zinc-900 shadow-sm group-hover:scale-105 transition-transform duration-300">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80" alt="Mariner Jihad Portrait" class="w-full h-full object-cover" referrerpolicy="no-referrer">
+          </div>
+          <div class="flex flex-col">
+            <span class="font-bold text-xs tracking-tight text-zinc-900 leading-tight group-hover:text-rose-600 transition-colors">Mariner Jihad</span>
+            <span class="text-[9px] text-zinc-400 font-medium leading-none">Developer Profile</span>
+          </div>
+        </div>
+        <!-- Rightward arrow to go to profile page -->
+        <svg class="w-4 h-4 text-rose-500 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </svg>
+      </a>
+    </aside>
+
+    <!-- Floating Toast stack container -->
+    <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2.5 max-w-sm pointer-events-none select-none"></div>
+
+    <!-- Contact client-side secure code -->
+    <script type="module" src="/src/contact.js"></script>
+  </body>
+</html>
