@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'GFF Latin Regular';
+  src: url('/font/gff-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "GFF Latin Regular", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-logo: "Alex Brush", cursive;
+}
+
+@layer base {
+  body {
+    font-family: 'GFF Latin Regular', ui-sans-serif, system-ui, sans-serif;
+    background-color: #fafafa;
+    color: #09090b;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom transitions and scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f4f4f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d8;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1aa;
+}
+
+/* Free Fire Glow/Sparkle effect [c] */
+.ff-glow-text {
+  text-shadow: 0 0 8px rgba(225, 29, 72, 0.6), 0 0 20px rgba(225, 29, 72, 0.3);
+  animation: ff-glow-pulse 2s infinite ease-in-out;
+}
+
+@keyframes ff-glow-pulse {
+  0%, 100% {
+    text-shadow: 0 0 6px rgba(225, 29, 72, 0.5), 0 0 15px rgba(225, 29, 72, 0.2);
+    filter: brightness(1);
+  }
+  50% {
+    text-shadow: 0 0 12px rgba(225, 29, 72, 0.8), 0 0 25px rgba(225, 29, 72, 0.5);
+    filter: brightness(1.2);
+  }
+}
+
+/* Smooth active underline effect for categories */
+.category-tab::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e11d48;
+  transition: width 0.3s ease;
+}
+
+.category-tab.active::after {
+  width: 100%;
+}
+
+/* Micro animations */
+.transition-all-300 {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom RGB Slider Picker Styles matching page design theme */
+.rgb-picker {
+  --r: 225;
+  --g: 29;
+  --b: 72;
+}
+
+.color-range-slider {
+  margin-top: 0.25rem;
+  width: 100%;
+  -webkit-appearance: none;
+  height: 0.5rem;
+  border-radius: 9999px;
+  outline: none;
+  background-color: #e4e4e7;
+  transition: box-shadow 0.2s ease;
+}
+
+.color-range-slider:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 4px rgba(225, 29, 72, 0.3);
+}
+
+#r {
+  background: linear-gradient(
+    to right, 
+    rgb(0, var(--g, 29), var(--b, 72)) 0%,     
+    rgb(255, var(--g, 29), var(--b, 72)) 100% 
+  );
+}
+
+#g {
+  background: linear-gradient(
+    to right, 
+    rgb(var(--r, 225), 0, var(--b, 72)) 0%,     
+    rgb(var(--r, 225), 255, var(--b, 72)) 100% 
+  );
+}
+
+#b {
+   background: linear-gradient(
+     to right, 
+     rgb(var(--r, 225), var(--g, 29), 0) 0%,     
+     rgb(var(--r, 225), var(--g, 29), 255) 100% 
+   ); 
+}
+
+/* Range input thumb overrides */
+.color-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: rgb(var(--r, 225), var(--g, 29), var(--b, 72));
+  box-shadow: 0 0 0 2px #fff, 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 1.25rem;
+  width: 1.25rem;
+  cursor: pointer;
+}
+
+.color-range-slider::-moz-range-thumb {
+  background-color: rgb(var(--r, 225), var(--g, 29), var(--b, 72));
+  box-shadow: 0 0 0 2px #fff, 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  border-radius: 9999px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 1.25rem;
+  width: 1.25rem;
+  cursor: pointer;
+}
+
+/* Animations and tweaks */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(0.97); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s infinite ease-in-out;
+}
+
+/* Explicit backdrop filter overrides for Safari and custom container renderers */
+.backdrop-blur-md {
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
